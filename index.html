@@ -1,1 +1,158 @@
-To be created...
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Old Stairwell 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20130313
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="google-site-verification" content="TKhkDFKyhvcrubOqVQVf7xQG4bUSzAuJlXiN4_Ts7yQ" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vienna Minimum Cuts </title>
+<meta name="keywords" content="graph partitioning, multilevel algorithm, minimum cut, minimum cuts, viecut, open source, kahip, algorithm, software, shared-memory parallel, parallel, label propagation, max flow, min cut" />
+<meta name="description" content="The main project page of to open source framework VieCut -- Vienna Minimum Cuts" />
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<!--[if IE 6]>
+<link href="default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1><a href="#">VieCut - </a><a href="#" style="color:red">Vie</a><a href="#">nna </a> <a href="#">Minimum</a> <a href="#" style="color:red">Cut</a><a href="#">s</a> </h1>
+Monika Henzinger, Alexander Noe, Christian Schulz and Darren Strash
+		</div>
+	</div>
+	<div id="page">
+		<div id="content">
+                
+                         
+		  <h2>Overview</h2>
+The minimum cut problem for an undirected edge-weighted graph asks us to divide its set of nodes into two blocks while minimizing the weight sum of the cut edges. It is a fundamental graph problem with many applications in different fields, such as network reliability, where assuming equal failure probability edges, the smallest edge cut in the network has the highest chance to disconnect the network; in VLSI design, where the minimum cut can be used to minimize the number of connections between microprocessor blocks; and as a subproblem in branch-and-cut algorithms for the Traveling Salesman Problem (TSP) and other combinatorial problems.
+
+<br>
+<br>
+
+  VieCut - <a href="#" style="color:red">Vie</a>nna Minimum <a href="#" style="color:red">Cut</a>s -- is a shared-memory parallel heuristic algorithm for the minimum cut problem. Based on the algorithm we also present a fast and exact shared-memory parallel algorithm for the minimum cut problem.
+
+  We provide it here as easy to use open source software.
+  The algorithm is based on the label propagation algorithm, the contraction tests of Padberg and Rinaldi and the minimum cut algorithm of Nagamochi et al. and computes minimum cuts of huge networks fast and with use of shared-memory parallelism. While VieCut can not guarantee solution quality, in practice the algorithm outputs better cuts than other inexact algorithms in significantly lower time, especially when using shared-memory parallelism. This codebase also includes a fast and exact shared-memory parallel based on VieCut and the algorithm of Nagamochi et al. Using the high-quality cuts given by VieCut the algorithm can detect and contract contractible edges fast and in parallel. Using these techniques we can compute exact minimum cuts significantly faster than the state of the art, sometimes with speedups of more than an order of magnitude.
+                       
+                        <br><br>
+
+Additionally we give a branch-and-reduce algorithm for the multiterminal cut problem. 
+The multiterminal cut problem is the NP-hard generalization of the minimum s-t-cut problem to more than two terminal vertices.
+Our algorithm combines a multitude of kernelization routines with a sophisticated branching routine and is able to solve this problem on some very large instances.
+Even if the algorithm is not able to guarantee optimality of its solution in a problem, it gives a high-quality approximation.
+
+<br><br>
+
+<b style="color:red">News:</b>       <br>
+<b> 13th December 2019:</b> Published instances used for paper Shared-Memory Branch-and-Reduce for Multiterminal Cuts. Please see Downloads below.<br>
+<b> 12th August 2019:</b> Published ArXiv Report (Shared-Memory Branch-and-Reduce for Multiterminal Cuts). Link to <a href="https://arxiv.org/abs/1908.04141">PDF</a>.<br>
+<b> 21st May 2019:</b> We presented our paper "Shared-memory Exact Minimum Cuts" at IPDPS 2019 <br>
+<b> 7th January 2019:</b> Released VieCut v1.00.  <br>
+  <b>16th August 2018:</b> Published ArXiv Report (Shared-memory Exact Minimum Cuts). Link to <a href="https://arxiv.org/abs/1808.05458">PDF</a>.<br>
+<b> 7th January 2018</b> We presented our paper "Practical Minimum Cut Algorithms" at ALENEX 2018 <br>
+    <b>27th August 2017:</b> Published ArXiv Report (Practical Minimum Cut Algorithms). Link to <a href="https://arxiv.org/abs/1708.06127">PDF</a>.<br>
+
+
+ 
+                        <p></p>
+                        <br>
+
+			<h2>License</h2>
+                        The program is licenced under the MIT license.<br>
+                        If you publish results using our algorithms, <b>please acknowledge</b> our work by referencing all applicable papers:<br><br>
+                        <b>@article{Henzinger2018Practical, <br>
+ &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp AUTHOR = {Henzinger, Monika and Noe, Alexander and Schulz, Christian and Strash, Darren},<br>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp                       TITLE = {{Practical Minimum Cut Algorithms}},<br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  JOURNAL={Journal of Experimental Algorithmics (JEA)}, <br>
+  <!--&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp                       VOLUME = {75},<br>-->
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp                       VOLUME={23},<br>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp                       NUMBER={1},<br>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp                       PAGES={1--8},<br>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp                       YEAR    = {2018},<br>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp                       PUBLISHER={ACM},<br>
+    }</b>
+
+  <br><br>
+
+  <b>@inproceedings{henzinger2019shared, <br>
+ &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp AUTHOR = {Henzinger, Monika and Noe, Alexander and Schulz, Christian},<br>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp                       TITLE = {{Shared-memory Exact Minimum Cuts}},<br>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp                       BOOKTITLE = {2019 IEEE International Parallel and Distributed Processing Symposium (IPDPS)},<br>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp                       PAGES = {13--22},<br>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp                       ORGANIZATION = {IEEE},<br>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp                       YEAR    = {2019}<br>
+                        }</b>
+<br><br>
+
+<b>@inproceedings{henzinger2019branch, <br>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp AUTHOR = {Henzinger, Monika and Noe, Alexander and Schulz, Christian},<br>
+         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp                       TITLE = {{Shared-memory Branch-and-Reduce for Multiterminal Cuts}},<br>
+         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp                       JOURNAL = {arXiv preprint arXiv:1908.04141},<br>
+         <!--&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp                       VOLUME = {75},<br>-->
+         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp                       YEAR    = {2019}<br>
+                               }</b>
+       <br><br>
+
+
+The algorithms that are included for download are mainly based on the following publications: <br> <br>
+        <ul>
+          <li> Monika Henzinger, Alexander Noe, Christian Schulz and Darren Strash. Practical Minimum Cut Algorithms. Proceedings of the Twentieth Workshop on Algorithm Engineering and Experiments (ALENEX'18). 2018. <a href="https://arxiv.org/abs/1708.06127">Download PDF</a>.<br>
+<li> Monika Henzinger, Alexander Noe and Christian Schulz. Shared-memory Exact Minimum Cuts. 2019. 2019 IEEE International Parallel and Distributed Processing Symposium (IPDPS) <a href="http://arxiv.org/pdf/1808.05458.pdf">Download PDF</a>.<br>
+<li> Monika Henzinger, Alexander Noe and Christian Schulz. Shared-memory Branch-and-Reduce for Multiterminal Cuts. 2019. (to appear at ALENEX'20) <a href="http://arxiv.org/pdf/1908.04141.pdf">Download PDF</a>.<br><br>
+
+
+</ul>
+                        <p></p>
+			<h2>Download</h2> 
+                        <ul>
+                                <li> Code and user guide available on GitHub <a href="https://github.com/alexnoe/VieCut/">here</a>
+                                <li> <a href="http://viecut.taa.univie.ac.at/viecutv1_00.tar.gz">viecutv1_00.tar.gz</a> (submodules accessed on 7. January 2019)
+                                <li> Instances used for multiterminal cut problem: <a href="http://viecut.taa.univie.ac.at/instances.tar.gz">instances.tar.gz</a>
+                        </ul>
+
+			<h2>Support</h2>
+                        <ul>
+                                <li> Write us an <a href="mailto:alexander.noe@univie.ac.at?subject=SupportRequestVieCut">email</a> if you need support!
+                                <li>We are glad for any comments and error reports (or even bug fixes or feature requests) that you send us. 
+                                </ul>
+                                
+			<h2>Other Open Source Projects</h2>
+                        <ul>
+                                <li> <a href="http://algo2.iti.kit.edu/kahip">KaHIP</a> -- Karlsruhe High Quality Partitioning
+                                <li> <a href="http://algo2.iti.kit.edu/kahip">ParHIP</a> -- Parallel High Quality Partitioning
+                                <li> <a href="http://algo2.iti.kit.edu/kamis">KaMIS</a> -- Karlsruhe Maximum Independent Sets 
+                                <li> <a href="http://algo2.iti.kit.edu/kalp">KaLP</a> -- Karlsruhe Longest Paths 
+                                <li> <a href="http://algo2.iti.kit.edu/kadraw">KaDraw</a> -- Karlsruhe Graph Drawing 
+                                <li> <a href="http://viem.taa.univie.ac.at">VieM</a> -- Vienna Mapping and Sparse Quadratic Assignment
+                                <li> <a href="http://vieclus.taa.univie.ac.at">VieClus</a> -- Vienna Graph Clustering
+                                </ul>
+                                
+
+</a>
+
+
+
+
+	        </div>
+
+        </div>
+	<div id="footer">
+		<p>Copyright (c) 2018-2019. Site maintained by Alexander Noe. All rights reserved. Initial release of VieCut: 7. January 2019. See main site for impressum. Design by <a href="http://www.freecsstemplates.org">FCT</a>.</p>
+	</div>
+</div>
+</body>
+</html>
